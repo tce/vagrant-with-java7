@@ -40,7 +40,7 @@ class java7 {
       apt::ppa { 'ppa:webupd8team/java': }
       package { 'oracle-java7-installer':
         responsefile => '/tmp/java.preseed',
-        require      => [
+        require      => [ 
                           Apt::Ppa['ppa:webupd8team/java'],
                           File['/tmp/java.preseed']
                         ],
